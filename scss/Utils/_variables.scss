@@ -6,24 +6,38 @@ $grey-footer : #f4f4f4;
 
 // breakpoints
 
-$big-mobile: 376px;
+$large-mobile: 376px;
 $tablet: 768px;
 $desktop: 1024px;
 
-@mixin big-mobile {
-	@media (min-width: $big-mobile) {
+@mixin media_large_mobile {
+	@media (min-width: $large-mobile) {
 		@content;
 	}
 }
 
-@mixin tablet {
+@mixin media_tablet {
 	@media (min-width: $tablet) {
 		@content;
 	}
 }
 
-@mixin desktop {
+@mixin media_desktop {
 	@media (min-width: $desktop) {
 		@content;
 	}
+}
+
+
+////
+@include media_large_mobile {
+
+}
+
+@include media_tablet {
+
+}
+
+@include media_desktop {
+
 }

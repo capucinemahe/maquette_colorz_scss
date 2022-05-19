@@ -5,6 +5,7 @@
 
 body {
     font-family: Helvetica, sans-serif;
+    min-width: 375px;
     max-width: 1800px;
 }
 
@@ -20,11 +21,23 @@ a {
 
     &_text {
         @include font(16px, 400, 24px, center);
-        padding: 50px 38px 25px 38px;
+        margin: 50px 38px 25px 38px;
+
+        @include media_tablet {
+            margin: 50px 50px 35px 50px;
+        }
     }
 }
 
 /////// SECTION 2 ////////
+
+.section_2 {
+    width: 100%;
+
+    @include media_tablet {
+        @include flex(row, center, center);
+    }
+}
 
 .section_2_text h3 {
     @include font(22px, 500, 34px, center);
@@ -44,6 +57,14 @@ a {
 .section_2_image {
     @include size(375px, 279px);
     margin-bottom: 20px;
+
+    @include media_large_mobile {
+        @include size(100%, 100%);
+    }
+
+    @include media_tablet {
+        @include size(60%, 100%);
+    }
 }
 
 //////// SECTION 3 - SLIDER //////
@@ -53,6 +74,10 @@ a {
 .slide_image_3 {
     @include size(375px, 183px);
     z-index: -1;
+
+    @include media_large_mobile {
+        @include size(100%, 100%);
+    }
 }
 
 //////// SECTION 4 //////////
@@ -60,8 +85,20 @@ a {
 .section_4 {
     @include flex(column, center, center);
 
+    @include media_tablet {
+        @include flex(row, center, center);
+    }
+
     &_image {
         @include size(375px, 416px);
+
+        @include media_large_mobile {
+            @include size(100%, 100%);
+        }
+
+        @include media_tablet {
+            @include size(50%, 100%);
+        }
     }
 
     &_text {
@@ -77,15 +114,36 @@ a {
 h4 {
     @include font(22px, 500, 34px, left);
     width: 270px;
+
+    @include media_large_mobile {
+        width: 85%;
+    }
+
+    @include media_tablet {
+    }
 }
 
 .section_4_text_desktop {
     display: none;
+
+    @include media_tablet {
+        display: block;
+        @include font(16px, 400, 24px, left);
+        margin-top: 18px;
+      }
 }
 
 .section_4_text_mobile {
     @include font(16px, 400, 24px, left);
     margin: 21px 0 60px 0;
+
+    @include media_large_mobile {
+        width: 85%;
+    }
+
+    @include media_tablet {
+      display: none;
+    }
 }
 
 ///////// SECTION 5 ///////
@@ -95,9 +153,17 @@ h4 {
     color: white;
     @include size(375px, 274px);
 
+    @include media_large_mobile {
+        width: 100%;
+    }
+
     &_text {
         @include font(22px, 500, 34px, center);
         padding: 51px 46px 15px 46px;
+
+        @include media_tablet {
+            padding: 5% 30%;
+        }
     }
 
     &_auteur {
@@ -109,6 +175,14 @@ h4 {
 .section_5_dots {
     @include flex(row, space-between, center);
     margin: 0 140px;
+
+    @include media_large_mobile {
+        margin: 3% 40%;
+    }
+
+    @include media_tablet {
+        margin: 3% 42%;
+    }
 }
 
 .dot_black {
@@ -126,31 +200,17 @@ h4 {
 /////// SECTION 6 ////////
 
 .section_6 {
-    @include size(375px, 534px);
     @include flex(column, center, center);
     margin: 50px 0 60px 0;
 
-    &_text {
+    &_title {
         @include font(30px, 500, 42px, center);
         padding: 0 0 40px 0;
+
+        @include media_large_mobile {
+            width: 75%;
+        }
     }
-
-    &_image {
-        @include size(209px, 209px);
-    }
-}
-
-.accessories_2 {
-    @include size(245px, 368px);
-    @include flex(column, center, center);
-    border: 1px solid #e4e4e4;
-    border-radius: 5px;
-    margin: auto;
-}
-
-.accessories_1,
-.accessories_3 {
-    display: none;
 }
 
 .accessories_text {
@@ -161,4 +221,25 @@ h4 {
 
 .accessories_price {
     @include font(16px, 400, 24px, center);
+}
+
+.swiper {
+    @include size(100%, 100%);
+}
+
+.swiper-slide {
+    @include size(254px, 368px);
+    @include flex(column, center, center);
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    margin-right: 37px;
+
+    @include media_large_mobile {
+        @include size(398px, 514px);
+        margin-right: 20px;
+    }
+}
+
+.swiper-slide img {
+    @include size(209px, 209px);
 }
