@@ -1,0 +1,28 @@
+.footer {
+    background-color: $grey-footer;
+    padding: 60px 0 60px 36px;
+
+    &_logo {
+        @include size(132.67px, 30.01px);
+        padding-bottom: 30px;
+    }
+
+    &_adresses {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.city_name, .contact_title {
+    @include font(22px, 500, 34px, left);
+}
+
+.city_text, .contact_text {
+    @include font(16px, 400, 24px, left);
+    padding-bottom: 20px;
+}
+
+.logo_create {
+    @include size(73px, 66px);
+    padding-top: 10px;
+}

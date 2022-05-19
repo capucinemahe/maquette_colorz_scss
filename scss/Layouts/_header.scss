@@ -1,0 +1,36 @@
+header {
+    @include flex(column, none, none);
+    height: 859px;
+}
+
+h1 {
+    @include font(24px, 500, 29.3px, center);
+    margin-top: 30px;
+}
+
+.nav_barre {
+    display: none;
+}
+
+h2 {
+    @include font(16px, 400, 24px, center);
+    color: $orange;
+    padding: 0 76px;
+    margin-top: 40px;
+}
+
+h3 {
+    @include font(22px, 500, 34px, center);
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.header_image_mobile {
+    position: absolute;
+    z-index: -10;
+    @include size(375px, 859px);
+}
+
+.header_image_desktop {
+    display: none;
+}

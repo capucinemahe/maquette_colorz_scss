@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    max-width: 1800px;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+/////// SECTION 1 ////////
+
+.section_1 {
+    @include flex(column, center, center);
+
+    &_text {
+        @include font(16px, 400, 24px, center);
+        padding: 50px 38px 25px 38px;
+    }
+}
+
+/////// SECTION 2 ////////
+
+.section_2_text h3 {
+    @include font(22px, 500, 34px, center);
+    padding: 49px 36px 0 36px;
+}
+
+.section_2_text_mobile {
+    display: block;
+    @include font(16px, 400, 24px, center);
+    margin: 15px 36px 45px 36px;
+}
+
+.section_2_text_desktop {
+    display: none;
+}
+
+.section_2_image {
+    @include size(375px, 279px);
+    margin-bottom: 20px;
+}
+
+//////// SECTION 3 - SLIDER //////
+
+.slide_image_1,
+.slide_image_2,
+.slide_image_3 {
+    @include size(375px, 183px);
+    z-index: -1;
+}
+
+//////// SECTION 4 //////////
+
+.section_4 {
+    @include flex(column, center, center);
+
+    &_image {
+        @include size(375px, 416px);
+    }
+
+    &_text {
+        margin: 30px 36px 0 36px;
+    }
+}
+
+.lock {
+    @include size(33.44px, auto);
+    margin-bottom: 21px;
+}
+
+h4 {
+    @include font(22px, 500, 34px, left);
+    width: 270px;
+}
+
+.section_4_text_desktop {
+    display: none;
+}
+
+.section_4_text_mobile {
+    @include font(16px, 400, 24px, left);
+    margin: 21px 0 60px 0;
+}
+
+///////// SECTION 5 ///////
+
+.section_5 {
+    background-color: $orange;
+    color: white;
+    @include size(375px, 274px);
+
+    &_text {
+        @include font(22px, 500, 34px, center);
+        padding: 51px 46px 15px 46px;
+    }
+
+    &_auteur {
+        @include font(16px, 400, 24px, center);
+        padding-bottom: 24px;
+    }
+}
+
+.section_5_dots {
+    @include flex(row, space-between, center);
+    margin: 0 140px;
+}
+
+.dot_black {
+    background-color: black;
+    @include size(8px, 8px);
+    border-radius: 50%;
+}
+
+.dot_white {
+    background-color: white;
+    @include size(8px, 8px);
+    border-radius: 50%;
+}
+
+/////// SECTION 6 ////////
+
+.section_6 {
+    @include size(375px, 534px);
+    @include flex(column, center, center);
+    margin: 50px 0 60px 0;
+
+    &_text {
+        @include font(30px, 500, 42px, center);
+        padding: 0 0 40px 0;
+    }
+
+    &_image {
+        @include size(209px, 209px);
+    }
+}
+
+.accessories_2 {
+    @include size(245px, 368px);
+    @include flex(column, center, center);
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.accessories_1,
+.accessories_3 {
+    display: none;
+}
+
+.accessories_text {
+    @include font(22px, 500, 34px, center);
+    margin: 14px 28px 0 28px;
+    padding-bottom: 4.87px;
+}
+
+.accessories_price {
+    @include font(16px, 400, 24px, center);
+}
