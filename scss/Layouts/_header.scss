@@ -2,7 +2,6 @@ header {
     @include flex(column, flex-start, center);
     width: 375px;
     height: 53.688rem;
-
     background: no-repeat url("/images/photo_header_mobile.png");
 
     @include media_large_mobile {
@@ -12,6 +11,8 @@ header {
     }
 
     @include media_tablet {
+        width: 100%;
+        height: 55rem;
         background: top no-repeat url("/images/photo_header_tablet.png");
     }
 
@@ -22,11 +23,11 @@ header {
 }
 
 h1 {
-    @include font(24px, 500, 29.3px, center);
+    @include font(1.5rem, 500, 1.831rem, center);
     margin-top: 1.875rem;
 
     @include media_large_mobile {
-        margin-top: 10px;
+        margin-top: 2rem;
     }
 
     @include media_tablet {
@@ -36,10 +37,16 @@ h1 {
 }
 
 .navigation {
+    width: 100%;
+
     @include media_tablet {
+        width: 88%;
         @include flex(row, space-between, baseline);
-        margin: 40px 10px 0 10px;
+        margin-top: 45px;
     }
+    @include media_desktop_large {
+    }
+  
 }
 
 .nav_barre {
@@ -48,43 +55,71 @@ h1 {
     @include media_tablet {
         display: block;
         @include flex(row, flex-end, baseline);
-        @include font(16px, 500, 19.54px, center);
     }
 
     &_title {
-        padding-right: 15px;
+        padding-right: 25px;
+        @include font(16px, 500, 19.54px, center);
     }
 
     &_button {
         border: none;
         background-color: $orange;
         color: white;
-        @include font(12px, 600, 28px, center);
-        @include size(60px, 35px);
-        border-radius: 20px;
+        @include font(16px, 500, 19.54px, center);
+        @include size(79px, 42px);
+        border-radius: 150px;
     }
 }
 
 h2 {
-    @include font(16px, 400, 24px, center);
+    @include font(1rem, 400, 1.5rem, center);
     color: $orange;
-    padding: 0 76px;
-    margin-top: 40px;
+    padding: 0 4.75rem;
+    margin-top: 2.5rem;
 
     @include media_large_mobile {
-        padding: 0;
-        margin-top: 10px;
-        @include font(12px, 400, 16px, center);
+        padding: 0 3rem;
+        margin-top: 1rem;
+    }
+
+    @include media_tablet {
+        margin-top: 2rem;
+    }
+
+    @include media_desktop {
+        padding-top: 4rem;
+    }
+
+    @include media_desktop_large {
+        padding-top: 7.625rem;
+        margin: 0;
     }
 }
 
 h3 {
-    @include font(22px, 500, 34px, center);
+    @include font(1.375rem, 500, 2.125rem, center);
     padding: 0 10px;
     margin-top: 10px;
 
     @include media_large_mobile {
-        @include font(16px, 500, 15px, center);
-        padding: 0 40px;
+        padding: 0 10%;
+    }
+    
+    @include media_tablet {
+        @include font(1.5rem, 400, 1.5rem, center);
+        padding: 1.5rem 10rem 0 10rem;
+    }
+
+    @include media_desktop {
+        @include font(2.5rem, 500, 3rem, center);
+        padding: 1.266rem 10rem 0 10rem;
+        margin: 0;
+    }
+
+    @include media_desktop_large {
+        @include font(3.25rem, 500, 3.75rem, center);
+        padding: 1.266rem 13.125rem 0 13.125rem;
+        margin: 0;
     }
 }

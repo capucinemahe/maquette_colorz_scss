@@ -1,6 +1,6 @@
 .footer {
-    background-color: $grey-footer;
-    padding: 3.5rem 0 3.5rem 2.25rem;
+    background-color: $back-footer;
+    padding: 3.75rem 0 3.75rem 2.25rem;
 
     @include media_large_mobile {
         padding: 3.75rem 15%;
@@ -10,9 +10,18 @@
         padding: 3.75rem 6%;
     }
 
+    @include media_desktop_large {
+        padding: 5.375rem 6.5rem;
+    }
+
     &_logo_1 {
-        @include size(132.67px, 30.01px);
+        @include size(132.67px, 30px);
         padding-bottom: 1.875rem;
+
+        @include media_desktop_large {
+            padding-bottom: 2.813rem;
+        }
+
     }
 
     &_adresses {
@@ -25,47 +34,52 @@
     }
 }
 
+.footer_bottom {
+    @include media_tablet {
+        @include flex(row, space-between, center);
+    }
+}
+
 .city {
     @include media_tablet {
         padding-right: 10%;
     }
 
-  
     @include media_desktop {
-        padding-right: 5%;
+        padding-right: 25%;
+    }
+
+    @include media_desktop_large {
+        padding-right: 25%;
     }
 }
 
+
 .city_name,
 .contact_title {
-    @include font(22px, 500, 34px, left);
+    @include font(1.375rem, 500, 2.125rem, left);
 
     @include media_tablet {
-        @include font(16px, 600, 28px, left);
+        white-space: nowrap;
     }
 }
 
 .city_text,
 .contact_text {
-    @include font(16px, 400, 24px, left);
-    padding-bottom: 20px;
-
-    @include media_tablet {
-        @include font(13px, 400, 20px, left);
-    }
+    @include font(1rem, 400, 1.5rem, left);
+    padding-bottom: 1.25rem;
+    white-space: nowrap;
 }
 
 .footer_logo_2 {
     @include size(73px, 66px);
-    padding-top: 10px;
+    padding-top: 0.625rem;
 
     @include media_tablet {
         padding-top: 0;
-        padding-left: 20%;
     }
 
     @include media_desktop {
         padding-left: 25%;
     }
-
 }

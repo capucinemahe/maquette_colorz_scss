@@ -6,4 +6,8 @@
     font-weight: 700;
     font-size: 16px;
     border-radius: 150px;
+
+    @include media_desktop_large {
+        font-weight: 500;
+    }
 }

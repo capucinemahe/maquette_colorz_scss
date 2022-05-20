@@ -6,7 +6,8 @@
 body {
     font-family: Helvetica, sans-serif;
     min-width: 375px;
-    max-width: 1800px;
+    max-width: 1440px;
+    font-size: 16px;
 }
 
 a {
@@ -19,13 +20,27 @@ a {
 .section_1 {
     @include flex(column, center, center);
 
+    @include media_desktop_large {
+        padding-bottom: 40px;
+    }
+
     &_text {
-        @include font(16px, 400, 24px, center);
-        margin: 50px 38px 25px 38px;
+        @include font(1rem, 400, 1.5rem, center);
+        margin: 3.125rem 2.375rem 1.563rem 2.375rem;
 
         @include media_tablet {
-            margin: 50px 50px 35px 50px;
+            margin: 3rem 4rem 2.188rem 4rem;
         }
+
+        @include media_desktop {
+            margin: 1rem 20% 2.5rem 20%;
+            @include font(1.375rem, 500, 2.125rem, center);
+        }
+
+        @include media_desktop_large {
+            margin: 50px 313px 31px 314px;
+        }
+
     }
 }
 
@@ -39,24 +54,54 @@ a {
     }
 }
 
-.section_2_text h3 {
-    @include font(22px, 500, 34px, center);
+.section_2_text {
+
+    @include media_desktop_large {
+        margin-left: 104px;
+    }
+}
+
+.section_2_text_title {
+    @include font(1.375rem, 500, 2.125rem, center);
     padding: 49px 36px 0 36px;
+    margin: 0;
+
+    @include media_desktop_large {
+        @include font(40px, 500, 56px, left);
+        padding: 0;
+    }
+
 }
 
 .section_2_text_mobile {
     display: block;
-    @include font(16px, 400, 24px, center);
+    @include font(1rem, 400, 1.5rem, center);
     margin: 15px 36px 45px 36px;
+
+    @include media_large_mobile {
+        margin: 15px 20% 10px 20%;
+    }
+
+    @include media_desktop_large {
+        display: none;
+    }
 }
 
 .section_2_text_desktop {
     display: none;
+
+    @include media_desktop_large {
+        display: block;
+        @include font(1.375rem, 500, 2.125rem, left);
+        padding-top: 19px;
+        padding-right: 20px;
+    }
+
 }
 
 .section_2_image {
     @include size(375px, 279px);
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 
     @include media_large_mobile {
         @include size(100%, 100%);
@@ -102,24 +147,38 @@ a {
     }
 
     &_text {
-        margin: 30px 36px 0 36px;
+        margin: 1.875rem 2.25rem 0 2.25rem;
+
+        @include media_desktop {
+            margin-left: 124px;
+        }
     }
 }
 
 .lock {
-    @include size(33.44px, auto);
-    margin-bottom: 21px;
+    @include size(2.09rem, auto);
+    margin-bottom: 1.313rem;
+
+    @include media_desktop_large {
+        @include size(2.69rem, auto);
+        margin-bottom: 1.573rem;
+    }
 }
 
 h4 {
-    @include font(22px, 500, 34px, left);
-    width: 270px;
+    @include font(1.375rem, 500, 2.125rem, left);
+    width: 90%;
 
     @include media_large_mobile {
         width: 85%;
     }
 
-    @include media_tablet {
+    @include media_desktop {
+        @include font(2rem, 500, 2rem, left);
+    }
+
+    @include media_desktop_large {
+        @include font(2.5rem, 500, 3.5rem, left);
     }
 }
 
@@ -128,21 +187,30 @@ h4 {
 
     @include media_tablet {
         display: block;
-        @include font(16px, 400, 24px, left);
+        @include font(1rem, 400, 1.5rem, left);
         margin-top: 18px;
-      }
+    }
+
+    @include media_large_mobile {
+        width: 85%;
+    }
+
+    @include media_desktop_large {
+        @include font(1.375rem, 500, 2.125rem, left);
+        padding-right: 104px;
+    }
 }
 
 .section_4_text_mobile {
-    @include font(16px, 400, 24px, left);
-    margin: 21px 0 60px 0;
+    @include font(1rem, 400, 1.5rem, left);
+    margin: 1.313rem 0 3.75rem 0;
 
     @include media_large_mobile {
         width: 85%;
     }
 
     @include media_tablet {
-      display: none;
+        display: none;
     }
 }
 
@@ -151,49 +219,78 @@ h4 {
 .section_5 {
     background-color: $orange;
     color: white;
-    @include size(375px, 274px);
+    @include size(23.438rem, 17.125rem);
 
     @include media_large_mobile {
         width: 100%;
+        height: 80%;
     }
 
     &_text {
-        @include font(22px, 500, 34px, center);
+        @include font(1.375rem, 500, 2.125rem, center);
         padding: 51px 46px 15px 46px;
 
         @include media_tablet {
-            padding: 5% 30%;
+            padding: 5% 20% 2% 20%;
+            @include font(2rem, 500, 2.1rem, center);
+        }
+
+        @include media_desktop_large {
+            @include font(2.5rem, 400, 3.5rem, center);
+            padding: 100px 313px 22px 314px;
         }
     }
 
     &_auteur {
-        @include font(16px, 400, 24px, center);
+        @include font(1rem, 400, 1.5rem, center);
         padding-bottom: 24px;
+
+
+        @include media_large_mobile {
+            padding-bottom: 2rem;
+        }
+
+        @include media_desktop {
+            padding-bottom: 0;
+        }
+
+        @include media_desktop_large {
+            padding-bottom: 0;
+        }
     }
 }
 
 .section_5_dots {
     @include flex(row, space-between, center);
-    margin: 0 140px;
+    margin: 0 39%;
 
     @include media_large_mobile {
-        margin: 3% 40%;
+        margin: 0 42%;
+        padding-bottom: 4rem;
     }
 
     @include media_tablet {
-        margin: 3% 42%;
+        margin: 1% 45%;
+    }
+
+    @include media_desktop {
+        margin: 3.5% 45%;
+    }
+
+    @include media_desktop_large {
+        margin: 34px 47%;
     }
 }
 
 .dot_black {
     background-color: black;
-    @include size(8px, 8px);
+    @include size(0.5rem, 0.5rem);
     border-radius: 50%;
 }
 
 .dot_white {
     background-color: white;
-    @include size(8px, 8px);
+    @include size(0.5rem, 0.5rem);
     border-radius: 50%;
 }
 
@@ -201,45 +298,66 @@ h4 {
 
 .section_6 {
     @include flex(column, center, center);
-    margin: 50px 0 60px 0;
+    margin: 3.125rem 0 3.75rem 0;
 
     &_title {
-        @include font(30px, 500, 42px, center);
-        padding: 0 0 40px 0;
+        @include font(1.875rem, 500, 2.625rem, center);
+        padding: 0 0.5rem 2.5rem 0.5rem;
 
         @include media_large_mobile {
-            width: 75%;
+            @include font(1.6rem, 500, 2.4rem, center);
+            padding: 0 3rem 2.5rem 3rem;
+        }
+        @include media_tablet {
+            padding: 0 20% 2.5rem 20%;
+        }
+
+        @include media_desktop {
+            @include font(2.5rem, 500, 3.75rem, center);
+        }
+
+        @include media_desktop_large {
+            padding: 50px 209px 73px 209px;
+            @include font(3.25rem, 500, 3.75rem, center);
         }
     }
 }
 
-.accessories_text {
-    @include font(22px, 500, 34px, center);
-    margin: 14px 28px 0 28px;
-    padding-bottom: 4.87px;
-}
-
-.accessories_price {
-    @include font(16px, 400, 24px, center);
-}
-
 .swiper {
-    @include size(100%, 100%);
+    @include size(72%, 100%);
+
+    @include media_large_mobile {
+        @include size(80%, 100%);
+    }
+
+    @include media_tablet {
+        @include size(50%, 100%);
+    }
 }
 
 .swiper-slide {
-    @include size(254px, 368px);
+    @include size(245px, 368px);
     @include flex(column, center, center);
     border: 1px solid #e4e4e4;
     border-radius: 5px;
-    margin-right: 37px;
+    margin-right: 2.313rem;
 
-    @include media_large_mobile {
-        @include size(398px, 514px);
-        margin-right: 20px;
-    }
+    @include media_large_mobile {}
 }
 
 .swiper-slide img {
     @include size(209px, 209px);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.accessories_text {
+    @include size(189px, 68px);
+    @include font(1.375rem, 500, 2.125rem, center);
+    padding-bottom: 0.3rem;
+}
+
+.accessories_price {
+    @include font(1rem, 400, 1.5rem, center);
+    padding-bottom: 1.508rem;
 }

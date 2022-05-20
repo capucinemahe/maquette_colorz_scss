@@ -90,7 +90,7 @@
 
     <section class="section_2">
       <div class="section_2_text">
-        <h3>The most advanced technology</h3>
+        <h3 class="section_2_text_title">The most advanced technology</h3>
         <p class="section_2_text_mobile">
           We travelled all around the world, we rencontred all the Carton-Plume
           Masters to rapporter only the best.
@@ -217,32 +217,38 @@
     </section>
 
     <footer class="footer">
-      <img class="footer_logo_1" src="images/Logo_Colorz.png" alt="logo Colorz" />
+      <img
+        class="footer_logo_1"
+        src="images/Logo_Colorz.png"
+        alt="logo Colorz"
+      />
+      <div class="footer_bottom">
+        <div class="footer_adresses">
+          <div class="city">
+            <p class="city_name">Paris</p>
+            <p class="city_text">
+              16 bis avenue Parmentier <br />
+              75011 Paris, France
+            </p>
+          </div>
 
-      <div class="footer_adresses">
-        <div class="city">
-          <p class="city_name">Paris</p>
-          <p class="city_text">
-            16 bis avenue Parmentier <br />
-            75011 Paris, France
-          </p>
+          <div class="city">
+            <p class="city_name">Lyon</p>
+            <p class="city_text">
+              1 rue Lalande <br />
+              69006 Lyon, France
+            </p>
+          </div>
+
+          <div class="contact">
+            <p class="contact_title">Nous contacter</p>
+            <p class="contact_text">
+              +33 (0)1 82 83 83 60 <br />
+              hello@colorz.fr
+            </p>
+          </div>
         </div>
 
-        <div class="city">
-          <p class="city_name">Lyon</p>
-          <p class="city_text">
-            1 rue Lalande <br />
-            69006 Lyon, France
-          </p>
-        </div>
-
-        <div class="contact">
-          <p class="contact_title">Nous contacter</p>
-          <p class="contact_text">
-            +33 (0)1 82 83 83 60 <br />
-            hello@colorz.fr
-          </p>
-        </div>
         <div class="footer_logo_2">
           <img
             class="logo_create"
@@ -257,7 +263,8 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".swiper", {
-        direction: "horizontal", loop: true,
+        direction: "horizontal",
+        loop: true,
       });
     </script>
   </body>

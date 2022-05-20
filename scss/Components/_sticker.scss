@@ -1,44 +1,59 @@
 .header_sticker {
     @include flex(column, center, center);
-    @include absolute(720px, 0, 0, 205px);
-    @include size(154.33px, 154.33px);
+    @include absolute(45rem, 0, 0, 12.8rem);
+    @include size(9.644rem, 9.644rem);
     border-radius: 50%;
     color: white;
     background-color: $orange;
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
 
     @include media_large_mobile {
-        @include size(120px, 120px);
-        @include absolute(65%, 0, 0, 60%);
+        @include absolute(60%, 0, 0, 58%);
     }
 
+    @include media_tablet {
+        @include absolute(62%, 0, 0, 70%);
+    }
+
+    @include media_desktop {
+        @include absolute(65%, 0, 0, 80%);
+    }
+
+    @include media_desktop_large {
+        @include absolute(55%, 0, 0, 75%);
+        @include size(14.203rem, 14.203rem);
+    }
+
+
     &_title {
-        @include font(12px, 400, 14.32px, center);
+        @include font(0.75rem, 400, 0.896rem, center);
         transform: rotate(11.56deg);
         text-transform: uppercase;
 
-        @include media_large_mobile {
-            @include font(10px, 300, 10px, center);
+
+        @include media_desktop_large {
+            @include font(1.188rem, 400, 1.417rem, center);
         }
     }
 
     &_price {
-        @include font(29px, 700, 35.41px, center);
+        @include font(1.813rem, 700, 2.213rem, center);
         padding-bottom: 3px;
         transform: rotate(11.56deg);
 
-        @include media_large_mobile {
-            @include font(23px, 600, 30px, center);
+        @include media_desktop_large {
+            @include font(2.75rem, 700, 3.358rem, center);
         }
     }
 
     &_star {
-        @include font(10px, 300, 12.09px, center);
+        @include font(0.625rem, 300, 0.756rem, center);
         transform: rotate(11.56deg);
         padding-right: 20px;
 
-        @include media_large_mobile {
-            @include font(8px, 300, 8px, center);
+
+        @include media_desktop_large {
+            @include font(0.938rem, 300, 1.133rem, center);
         }
     }
 }

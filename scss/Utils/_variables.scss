@@ -1,7 +1,7 @@
 // couleurs
 
 $orange : #f0380f;
-$grey-footer : #f4f4f4;
+$back-footer : #f4f4f4;
 
 
 // breakpoints
@@ -9,6 +9,7 @@ $grey-footer : #f4f4f4;
 $large-mobile: 376px;
 $tablet: 768px;
 $desktop: 1024px;
+$desktop_large : 1440px;
 
 @mixin media_large_mobile {
 	@media (min-width: $large-mobile) {
@@ -28,16 +29,8 @@ $desktop: 1024px;
 	}
 }
 
-
-////
-@include media_large_mobile {
-
-}
-
-@include media_tablet {
-
-}
-
-@include media_desktop {
-
+@mixin media_desktop_large {
+	@media (min-width: $desktop_large) {
+		@content;
+	}
 }
