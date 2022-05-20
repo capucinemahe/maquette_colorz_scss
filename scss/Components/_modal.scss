@@ -1,5 +1,79 @@
-#section_modal {
-    display: none;
+  #section_modal {
+    display: block;
   }
 
-  
+  .modal {
+    visibility: hidden;
+    opacity: 0;
+    @include absolute(0, 0, 0, 0);
+    @include flex(column, center, center);
+    background: rgba(77, 77, 77, 0.6);
+    transition: all 0.4s;
+  }
+  .modal:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .modal_content {
+    @include size(80%, 60%);
+    border-radius: 4px;
+    position: relative;
+    background: white;
+    box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.15);
+    @include flex(column, center, center);
+  }
+
+  .image_modal {
+
+    @include media_desktop_large {
+      @include size(4.563rem, 4.563rem);
+    }
+  }
+  .modal_title {
+    margin-top: 1.563rem;
+    width: 60%;
+
+    @include font(1.2rem, 500, 1.5rem, center);
+
+    @include media_desktop_large {
+      @include font(2.5rem, 500, 3.5rem, center);
+    }
+  }
+  .modal_text_1 {
+    margin-top: 1.563rem;
+    @include font(1rem, 400, 1.5rem, center);
+    width: 90%;
+
+    @include media_desktop {
+      width: 70%;
+  }
+
+    @include media_desktop_large {
+      @include font(1.375rem, 500, 2.125rem, center);
+      width: 37.188rem;
+    }
+  }
+  .modal_text_2 {
+    margin-top: 1.563rem;
+    width: 90%;
+    @include font(1rem, 300, 1.5rem, center);
+    
+    @include media_desktop {
+      width: 70%;
+  }
+
+    @include media_desktop_large {
+      @include font(1.375rem, 400, 2.125rem, center);
+      width: 37.188rem;
+    }
+  }
+  .modal_close {
+    @include absolute(40px, 90%, 40px, 90%);
+
+    @include media_desktop_large {
+      color: grey;
+      text-decoration: none;
+      font-size: 40px;
+      font-weight: 300;
+    }
+  }
