@@ -78,8 +78,4 @@
     @include media_tablet {
         padding-top: 0;
     }
-
-    @include media_desktop {
-        padding-left: 25%;
-    }
 }

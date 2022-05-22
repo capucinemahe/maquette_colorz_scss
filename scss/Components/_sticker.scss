@@ -20,7 +20,7 @@
     }
 
     @include media_desktop_large {
-        @include absolute(55%, 0, 0, 75%);
+        @include absolute(40%, 0, 0, 75%);
         @include size(14.203rem, 14.203rem);
     }
 
