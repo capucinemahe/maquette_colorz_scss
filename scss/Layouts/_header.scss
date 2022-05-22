@@ -1,4 +1,6 @@
 header {
+
+    position: relative;
     @include flex(column, flex-start, center);
     width: 375px;
     height: 53.688rem;

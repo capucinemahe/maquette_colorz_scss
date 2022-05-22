@@ -1,6 +1,10 @@
-* {
+
+*, ::before, ::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    // word-break: break-all;
+    // word-wrap: break-word;
 }
 
 body {
