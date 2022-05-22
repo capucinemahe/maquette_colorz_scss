@@ -1,5 +1,4 @@
 header {
-
     position: relative;
     @include flex(column, flex-start, center);
     width: 375px;
@@ -51,20 +50,21 @@ h1 {
   
 }
 
-.nav_barre {
+ul {
     display: none;
 
     @include media_tablet {
         display: block;
         @include flex(row, flex-end, baseline);
     }
+}
 
-    &_title {
+    .nav_barre_title {
         padding-right: 25px;
         @include font(16px, 500, 19.54px, center);
     }
 
-    &_button {
+    .nav_barre_button {
         border: none;
         background-color: $orange;
         color: white;
@@ -72,7 +72,6 @@ h1 {
         @include size(79px, 42px);
         border-radius: 150px;
     }
-}
 
 h2 {
     @include font(1rem, 400, 1.5rem, center);
